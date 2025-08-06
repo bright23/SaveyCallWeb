@@ -13,7 +13,7 @@ body {
   font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.8;
   color: #2c3e50;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #EAF2CE 0%, #98C00C 100%);
   min-height: 100vh;
 }
 
@@ -44,7 +44,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(133, 152, 235, 0.1), transparent);
   animation: shimmer 3s ease-in-out infinite;
 }
 
@@ -67,6 +67,12 @@ body {
   box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
   position: relative;
   z-index: 2;
+}
+
+.app-icon img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
 }
 
 .main-title {
@@ -129,7 +135,7 @@ h2::before {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #3498db, #2980b9);
+  background: linear-gradient(135deg, #3498db, #3c8dc3);
   border-radius: 50%;
 }
 
@@ -220,7 +226,7 @@ li::before {
 }
 
 .security-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #9aacfc 0%, #dcc1f7 100%);
   color: white;
   border-radius: 15px;
   padding: 30px;
@@ -238,7 +244,7 @@ li::before {
 }
 
 .warning-section {
-  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  background: linear-gradient(135deg, #faa4a4 0%, #ffdb8c 100%);
   color: white;
   border-radius: 15px;
   padding: 30px;
@@ -323,7 +329,7 @@ li::before {
 }
 
 .important-notice {
-  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  background: linear-gradient(135deg, #fccaab, #f0958d);
   color: white;
   border-radius: 15px;
   padding: 25px;
