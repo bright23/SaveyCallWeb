@@ -1,0 +1,165 @@
+/* フォント読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: linear-gradient(135deg, #eaf2ce, #98c00c);
+  color: #2c3e50;
+  line-height: 1.8;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- ヒーローセクション ---------- */
+.hero-section {
+  padding: 60px 20px 40px;
+}
+
+.hero-section h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section .lead {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.appstore-badge {
+  width: 160px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.appstore-badge:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- スクロールセクション ---------- */
+.scroll-section {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.scroll-section h2 {
+  margin-bottom: 20px;
+}
+
+/* 無限横スクロール */
+.image-scroll {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.image-scroll::before,
+.image-scroll::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+}
+
+.image-scroll::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.image-scroll::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.image-scroll img {
+  height: 400px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  animation: scroll 30s linear infinite;
+}
+
+/* 無限スクロールアニメーション */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ---------- アプリ機能説明 ---------- */
+.features {
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+}
+
+.features h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.feature-box {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.feature-box h3 {
+  font-size: 1.3em;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 1.1em;
+}
+
+/* ---------- フッター ---------- */
+.footer {
+  background: #eaf2ce;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.footer a {
+  color: #2980b9;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.6em;
+  }
+
+  .hero-section .lead {
+    font-size: 1em;
+  }
+
+  .image-scroll img {
+    height: 250px;
+  }
+
+  .feature-box p {
+    font-size: 1em;
+  }
+}
