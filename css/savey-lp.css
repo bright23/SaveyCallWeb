@@ -211,3 +211,16 @@ body {
     font-size: 1em;
   }
 }
+
+/* 初期状態：非表示 & 下に少しずれている */
+.feature-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* スクロールで表示されるときのアニメーション */
+.feature-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
